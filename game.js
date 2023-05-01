@@ -14,15 +14,8 @@ var cube = new THREE.LineSegments(edges, lineMaterial);
 cube.add(new THREE.Mesh(geometry, material));
 scene.add(cube);
 
-// Add a background to the scene
-var textureLoader = new THREE.CubeTextureLoader();
-textureLoader.setPath('textures/skybox/'); // set the path to the skybox textures
-var texture = textureLoader.load([
-    'px.png', 'nx.png', // positive x and negative x
-    'py.png', 'ny.png', // positive y and negative y
-    'pz.png', 'nz.png'  // positive z and negative z
-]);
-scene.background = texture; // set the texture as the background of the scene
+scene.background = new THREE.Color(0x111111); // replace with your desired color value
+
 
 
 
