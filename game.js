@@ -14,6 +14,15 @@ var cube = new THREE.LineSegments(edges, lineMaterial);
 cube.add(new THREE.Mesh(geometry, material));
 scene.add(cube);
 
+// Create a plane for the background
+var planeGeometry = new THREE.PlaneGeometry(2, 2, 1, 1);
+var planeMaterial = new THREE.MeshBasicMaterial({color: 0x87CEEB});
+var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+plane.material.side = THREE.BackSide;
+plane.position.set(0, 0, -10);
+scene.add(plane);
+
+
 // Position the camera and set the initial rotation and direction
 camera.position.set(0, 0, 5);
 var direction = new THREE.Vector3(0, 0, -1);
