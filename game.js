@@ -9,15 +9,13 @@ document.body.appendChild(renderer.domElement);
 var geometry = new THREE.BoxGeometry();
 var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
 var edges = new THREE.EdgesGeometry(geometry);
-var lineMaterial = new THREE.LineBasicMaterial({color: 0x000000});
+var lineMaterial = new THREE.LineBasicMaterial({color: 0xffffff});
 var cube = new THREE.LineSegments(edges, lineMaterial);
 cube.add(new THREE.Mesh(geometry, material));
 scene.add(cube);
 
 // Set the background color of the scene
-scene.background = new THREE.Color(0x87CEEB); // replace with your desired color value
-
-
+scene.background = new THREE.Color(0x111111); // replace with your desired color value
 
 
 // Position the camera and set the initial rotation and direction
