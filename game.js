@@ -14,7 +14,8 @@ var cube = new THREE.LineSegments(edges, lineMaterial);
 cube.add(new THREE.Mesh(geometry, material));
 scene.add(cube);
 
-scene.background = new THREE.Color(0x111111); // replace with your desired color value
+// Set the background color of the scene
+scene.background = new THREE.Color(0x87CEEB); // replace with your desired color value
 
 
 
