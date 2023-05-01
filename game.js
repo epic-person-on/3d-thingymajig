@@ -14,13 +14,16 @@ var cube = new THREE.LineSegments(edges, lineMaterial);
 cube.add(new THREE.Mesh(geometry, material));
 scene.add(cube);
 
-// Create a plane for the background
-var planeGeometry = new THREE.PlaneGeometry(2, 2, 1, 1);
-var planeMaterial = new THREE.MeshBasicMaterial({color: 0x87CEEB});
-var plane = new THREE.Mesh(planeGeometry, planeMaterial);
-plane.material.side = THREE.BackSide;
-plane.position.set(0, 0, -10);
-scene.add(plane);
+// Add a background to the scene
+var textureLoader = new THREE.CubeTextureLoader();
+textureLoader.setPath('textures/skybox/'); // set the path to the skybox textures
+var texture = textureLoader.load([
+    'px.png', 'nx.png', // positive x and negative x
+    'py.png', 'ny.png', // positive y and negative y
+    'pz.png', 'nz.png'  // positive z and negative z
+]);
+scene.background = texture; // set the texture as the background of the scene
+
 
 
 // Position the camera and set the initial rotation and direction
