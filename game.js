@@ -16,7 +16,7 @@ scene.add(cube);
 var loader = new THREE.GLTFLoader();
 loader.load('./Strawberry_gltf.gltf', function(gltf) {
     var model = gltf.scene.children[0];
-    var texture = new THREE.TextureLoader().load('texture.png');
+    var texture = new THREE.TextureLoader().load('./Strawberry_Basecolor.jpg');
     var material = new THREE.MeshBasicMaterial({map: texture});
     model.traverse(function(child) {
         if (child instanceof THREE.Mesh) {
