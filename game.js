@@ -9,7 +9,7 @@ document.body.appendChild(renderer.domElement);
 var geometry = new THREE.BoxGeometry();
 var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
 var edges = new THREE.EdgesGeometry(geometry);
-var lineMaterial = new THREE.LineBasicMaterial({color: 0x#000000});
+var lineMaterial = new THREE.LineBasicMaterial({color: 0x000000});
 var cube = new THREE.LineSegments(edges, lineMaterial);
 cube.add(new THREE.Mesh(geometry, material));
 scene.add(cube);
