@@ -7,7 +7,7 @@ document.body.appendChild(renderer.domElement);
 
 // Create a cube with a texture
 var geometry = new THREE.BoxGeometry(1, 1, 1);
-var texture = new THREE.TextureLoader().load('texture.png');
+var texture = new THREE.TextureLoader().load('texture.jpg');
 var material = new THREE.MeshBasicMaterial({map: texture});
 var cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
