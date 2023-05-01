@@ -1,5 +1,7 @@
 // Initialize the scene, camera, and renderer
 var scene = new THREE.Scene();
+// Set the background color of the scene
+scene.background = new THREE.Color(0x111111); // replace with your desired color value
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -14,8 +16,7 @@ var cube = new THREE.LineSegments(edges, lineMaterial);
 cube.add(new THREE.Mesh(geometry, material));
 scene.add(cube);
 
-// Set the background color of the scene
-scene.background = new THREE.Color(0x111111); // replace with your desired color value
+
 
 
 // Position the camera and set the initial rotation and direction
