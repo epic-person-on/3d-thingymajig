@@ -14,7 +14,7 @@ scene.add(cube);
 
 // Load a 3D model
 var loader = new THREE.GLTFLoader();
-loader.load('model.gltf', function(gltf) {
+loader.load('./Strawberry_gltf.gltf', function(gltf) {
     var model = gltf.scene.children[0];
     var texture = new THREE.TextureLoader().load('texture.png');
     var material = new THREE.MeshBasicMaterial({map: texture});
