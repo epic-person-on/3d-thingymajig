@@ -7,7 +7,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 // Add a background to the scene
-var texture = new THREE.TextureLoader().load('download(7).jpeg');
+var texture = new THREE.TextureLoader().load('./download(7).jpeg');
 texture.wrapS = THREE.RepeatWrapping;
 texture.wrapT = THREE.RepeatWrapping;
 texture.repeat.set(4, 4); // adjust the repeat factor to fit your image
