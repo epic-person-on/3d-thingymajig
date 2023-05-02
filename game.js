@@ -1,11 +1,21 @@
 // Initialize the scene, camera, and renderer
 var scene = new THREE.Scene();
 // Set the background color of the scene
-scene.background = new THREE.Color(0xffffff); // replace with your desired color value
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer({canvas: document.getElementById('myCanvas'), antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
+
+// Add a background to the scene
+var texture = new THREE.TextureLoader().load('download(7).jpeg');
+texture.wrapS = THREE.RepeatWrapping;
+texture.wrapT = THREE.RepeatWrapping;
+texture.repeat.set(4, 4); // adjust the repeat factor to fit your image
+
+var textureCube = new THREE.CubeTexture([
+    texture, texture, texture, texture, texture, texture
+]);
+scene.background = textureCube;
 
 // Create a cube with outlines
 var geometry = new THREE.BoxGeometry();
